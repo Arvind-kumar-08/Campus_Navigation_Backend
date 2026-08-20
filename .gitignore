@@ -1,0 +1,14 @@
+
+env/
+
+__pycache__/
+
+.env
+
+*.pyc
+
+.idea/
+
+.vscode/
+
+documents/*.pdf

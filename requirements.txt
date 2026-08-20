@@ -1,0 +1,15 @@
+fastapi
+uvicorn[standard]
+
+sqlmodel
+sqlalchemy
+psycopg[binary]
+
+pgvector
+
+python-dotenv
+pydantic-settings
+
+alembic
+pymupdf
+google-genai
