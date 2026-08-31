@@ -42,9 +42,7 @@ def generate_document_embedding(
     return result.embeddings[0].values
 
 
-def generate_query_embedding(
-    text: str,
-) -> list[float]:
+def generate_query_embedding(text: str,) -> list[float]:
     """
     Generate an embedding for a user's search query.
     """
