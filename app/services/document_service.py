@@ -6,11 +6,7 @@ from app.models.document import Document
 from app.models.document_chunk import DocumentChunk
 
 
-def create_document(
-    session: Session,
-    file_path: str,
-    extracted_text: str,
-) -> Document:
+def create_document( session: Session,file_path: str,extracted_text: str,) -> Document:
     path = Path(file_path)
 
     with open(file_path, "rb") as file:
@@ -32,13 +28,7 @@ def create_document(
     return document
 
 
-def create_document_chunk(
-    session: Session,
-    document_id: int,
-    page_number: int,
-    chunk_index: int,
-    content: str,
-) -> DocumentChunk:
+def create_document_chunk(session: Session,document_id: int,page_number: int,chunk_index: int,content: str,) -> DocumentChunk:
     chunk = DocumentChunk(
         document_id=document_id,
         page_number=page_number,
