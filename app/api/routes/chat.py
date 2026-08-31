@@ -3,6 +3,7 @@ from fastapi import (
     Depends,
     HTTPException,
 )
+
 from sqlmodel import Session
 
 from app.db.database import get_session
@@ -32,23 +33,30 @@ def chat(
     ),
 ):
     try:
+        print(
+            "QUESTION RECEIVED:",
+            request.question,
+        )
+
         result = generate_rag_answer(
             session=session,
             question=request.question,
+        )
+
+        print(
+            "RAG RESULT:",
+            result,
         )
 
         return result
 
     except Exception as error:
         print(
-            "Chat API error:",
-            error,
+            "CHAT API FULL ERROR:",
+            repr(error),
         )
 
         raise HTTPException(
             status_code=500,
-            detail=(
-                "Unable to generate "
-                "AI response."
-            ),
+            detail=str(error),
         )

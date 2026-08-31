@@ -1,8 +1,4 @@
-def split_text(
-    text: str,
-    chunk_size: int = 1000,
-    overlap: int = 150,
-) -> list[str]:
+def split_text(text: str,chunk_size: int = 1000,overlap: int = 150,) -> list[str]:
 
     if not text.strip():
         return []

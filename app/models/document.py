@@ -2,8 +2,6 @@ from datetime import datetime
 
 from sqlalchemy import LargeBinary, Text
 from sqlmodel import SQLModel, Field
-
-
 class Document(SQLModel, table=True):
     __tablename__ = "documents"
 
