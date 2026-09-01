@@ -28,9 +28,7 @@ def _ocr_page(page) -> str:
     return text.strip()
 
 
-def extract_pdf_pages(
-    file_path: str,
-) -> list[dict]:
+def extract_pdf_pages(file_path: str,) -> list[dict]:
 
     document = pymupdf.open(file_path)
 
