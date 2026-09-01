@@ -7,7 +7,6 @@ from app.services.retrieval_service import (
     retrieve_relevant_chunks,
 )
 
-
 client = Groq(
     api_key=settings.GROQ_API_KEY,
 )
@@ -16,10 +15,7 @@ client = Groq(
 GENERATION_MODEL = "openai/gpt-oss-120b"
 
 
-def generate_rag_answer(
-    session: Session,
-    question: str,
-) -> dict:
+def generate_rag_answer(session: Session,question: str,) -> dict:
 
     # -----------------------------------------
     # 1. Retrieve relevant chunks
